@@ -6,19 +6,19 @@ public:
 
         int maxi = INT_MIN;
 
+         int currSum = 0;
+
         for(int i = 0; i< n; i++)
         {
-            int sum = 0;
-           for( int j = i; j < n; j++)
-           {
-            sum += nums[j];
-            maxi = max(sum, maxi);
+             currSum += nums[i];
+             maxi = max(maxi, currSum);
 
-           }
+            if(currSum < 0)
+            {
+                currSum = 0;
+            }
         }
 
       return maxi ;
-
-        
     }
 };
