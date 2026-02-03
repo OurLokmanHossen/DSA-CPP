@@ -9,13 +9,16 @@ public:
         int max_s = INT_MIN;
 
 
-        for(int i = 0; i<n; i++)
-        {
-            total_sum += nums[i];
-        }
+        // for(int i = 0; i<n; i++)
+        // {
+        //     total_sum += nums[i];
+        //  }
 
         for(int i = 0; i<n; i++)
        {
+
+         total_sum += nums[i];
+
            sum1 += nums[i];
            sum2 += nums[i];
 
@@ -28,7 +31,7 @@ public:
        }
         
         if(max_s < 0) return max_s;
-        
+
         return max(max_s, (total_sum - min_s));
     }
 };
