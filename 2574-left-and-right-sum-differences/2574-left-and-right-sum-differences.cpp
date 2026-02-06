@@ -14,11 +14,18 @@ public:
 
        for(int i = 0; i<n; i++) 
        {
-          dif[i] = abs(ls - (ts-ls-nums[i]));
+         int cs = nums[i];
+          int rs = ts - ls - cs;
 
-          ls += nums[i];
+          nums[i] = abs(rs - ls);
+
+           ls += cs;
+
+          
+
+
        }
-       return dif;
+       return nums;
 
        }
     
